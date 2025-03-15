@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw5ak8pmvg2uf"]
+
+[ext_resource type="Script" uid="uid://7mnpbgclmt8d" path="res://Game/MiningScene/Mineable/mineable.gd" id="1_n7h8p"]
+[ext_resource type="Texture2D" uid="uid://bcl5l4rwgt46" path="res://Game/MiningScene/Mineable/Assets/rock.png" id="1_o2wxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7h8p"]
+size = Vector2(12, 11)
+
+[node name="Mineable" type="Area2D"]
+script = ExtResource("1_n7h8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_n7h8p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_o2wxw")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

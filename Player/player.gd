@@ -12,24 +12,24 @@ var state
 
 func _ready():
 	state = states.PLATFORM
+	$Sprite2D/WeaponHitbox/CollisionShape2D.disabled = true
 
 
 func _physics_process(delta):
 		if state == states.MINING:
-			print("mining")
+			pass
 		elif state == states.PLATFORM:
 			get_input_platform()
 			velocity.y += gravity * delta
-			set_velocity(velocity)
 			set_up_direction(Vector2(0, -1))
 			move_and_slide()
 			velocity = velocity
 		elif state == states.LADDER:
 			get_input_ladder()
-			set_velocity(velocity)
 			set_up_direction(Vector2(0, -1))
 			move_and_slide()
 			velocity = velocity
+		set_velocity(velocity)
 		$AnimationPlayer.player_animations(is_on_floor(), state, velocity, $Sprite2D)
 		if !is_ovelapping_ladder and state != states.MINING:
 			state = states.PLATFORM
