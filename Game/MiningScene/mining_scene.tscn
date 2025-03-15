@@ -1,6 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyeqoy6p7lq4e"]
+[gd_scene load_steps=7 format=3 uid="uid://cyeqoy6p7lq4e"]
 
 [ext_resource type="Script" uid="uid://c562cibry7flx" path="res://Game/MiningScene/mining_scene.gd" id="1_cq2c5"]
+[ext_resource type="PackedScene" uid="uid://vibtxikddh72" path="res://Game/MiningScene/LevelStructure/solid.tscn" id="2_cstt1"]
+[ext_resource type="PackedScene" uid="uid://cbyc7negjiqed" path="res://Player/player.tscn" id="3_5apsa"]
+[ext_resource type="PackedScene" uid="uid://daaa1x3eyfn36" path="res://Game/MiningScene/Ladder/ladder.tscn" id="4_px0q7"]
+[ext_resource type="PackedScene" uid="uid://762ghrducao" path="res://Game/MiningScene/LevelStructure/one_way.tscn" id="5_urjtt"]
+[ext_resource type="PackedScene" uid="uid://c7arlsh6ls67h" path="res://Game/MiningScene/Ladder/ladder_top.tscn" id="6_ubwdu"]
 
 [node name="MiningScene" type="Node2D"]
 script = ExtResource("1_cq2c5")
+
+[node name="Solid" parent="." instance=ExtResource("2_cstt1")]
+position = Vector2(13, 173)
+scale = Vector2(14.92, 1)
+
+[node name="Ladder" parent="." instance=ExtResource("4_px0q7")]
+position = Vector2(182, 113)
+scale = Vector2(1, 4)
+
+[node name="OneWay" parent="." instance=ExtResource("5_urjtt")]
+position = Vector2(162, 113)
+scale = Vector2(0.408203, 0.519995)
+
+[node name="LadderTop" parent="." instance=ExtResource("6_ubwdu")]
+position = Vector2(182, 110)
+scale = Vector2(0.244445, 0.28577)
+
+[node name="Player" parent="." instance=ExtResource("3_5apsa")]
+position = Vector2(116, 148)
