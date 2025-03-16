@@ -6,8 +6,17 @@ var inventory = []
 func _ready() -> void:
 	inventory.resize(10)
 
-func add_item() -> void:
-	SignalManager.emit_signal("inventory_updated")
+func add_item(item) -> bool:
+	for i in range(inventory.size()):
+		if inventory[i] != null and inventory[i]["type"] == item["type"] and inventory[i]["name"] == item["name"]:
+			inventory[i]["quantity"] += item["quantity"]
+			SignalManager.emit_signal("inventory_updated")
+			return true
+		elif inventory[i] == null:
+			inventory[i] = item
+			SignalManager.emit_signal("inventory_updated")
+			return true
+	return false
 
 func remove_item() -> void:
 	SignalManager.emit_signal("inventory_updated")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dor380hd3sm5f"]
+[gd_scene load_steps=6 format=3 uid="uid://dor380hd3sm5f"]
 
 [ext_resource type="PackedScene" uid="uid://vibtxikddh72" path="res://Game/MiningScene/LevelStructure/solid.tscn" id="1_etedl"]
 [ext_resource type="PackedScene" uid="uid://cbyc7negjiqed" path="res://Player/player.tscn" id="2_sobo7"]
 [ext_resource type="PackedScene" uid="uid://brchx6ivwiru4" path="res://Game/HomeScene/MineEntrance/mine_entrance.tscn" id="3_sobo7"]
+[ext_resource type="PackedScene" uid="uid://dkllacsyjfh2b" path="res://Game/MiningScene/InventoryItem/inventory_item.tscn" id="4_rrkci"]
+[ext_resource type="Texture2D" uid="uid://b3yyl6yfh4ybv" path="res://Game/MiningScene/Mineable/Assets/collectable_rock.png" id="5_a0e3j"]
 
 [node name="Home" type="Node2D"]
 
@@ -15,3 +17,10 @@ scale = Vector2(15.96, 1.00364)
 
 [node name="Player" parent="." instance=ExtResource("2_sobo7")]
 position = Vector2(216, 172)
+
+[node name="InventoryItem" parent="." instance=ExtResource("4_rrkci")]
+position = Vector2(121, 174)
+item_type = "Ingredient"
+item_name = "Stone"
+item_texture = ExtResource("5_a0e3j")
+item_effect = "nothing"
