@@ -6,7 +6,7 @@ func _process(_delta: float) -> void:
 		_on_Button_pressed()
 
 func _on_Button_pressed():
-	get_tree().change_scene_to_file("res://Game/game.tscn")
+	get_tree().change_scene_to_file("res://Game/HomeScene/home.tscn")
 
 
 func _on_play_button_pressed() -> void:

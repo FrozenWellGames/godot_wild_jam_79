@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://brchx6ivwiru4"]
+
+[ext_resource type="Script" uid="uid://d2aydrcgmftov" path="res://Game/HomeScene/MineEntrance/mine_entrance.gd" id="1_lsxwu"]
+[ext_resource type="Texture2D" uid="uid://dsmvk4xob4pk" path="res://Game/HomeScene/mine_entrance.png" id="1_x3g7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsxwu"]
+size = Vector2(35, 34)
+
+[node name="MineEntrance" type="Node2D"]
+script = ExtResource("1_lsxwu")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -7)
+shape = SubResource("RectangleShape2D_lsxwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -28)
+texture = ExtResource("1_x3g7k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

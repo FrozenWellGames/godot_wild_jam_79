@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkllacsyjfh2b"]
+
+[ext_resource type="Texture2D" uid="uid://b3yyl6yfh4ybv" path="res://Game/MiningScene/Mineable/Assets/collectable_rock.png" id="1_a5k0q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjke1"]
+size = Vector2(13, 11)
+
+[node name="Collectable" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_yjke1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_a5k0q")
