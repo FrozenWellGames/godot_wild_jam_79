@@ -11,6 +11,7 @@ var state
 
 
 func _ready():
+	GameManager.set_player_reference(self)
 	state = states.PLATFORM
 	$Sprite2D/WeaponHitbox/CollisionShape2D.disabled = true
 

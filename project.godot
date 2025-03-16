@@ -21,6 +21,10 @@ SignalManager="*res://Singletons/signal_manager.gd"
 GameManager="*res://Singletons/game_manager.gd"
 Inventory="*res://Singletons/inventory.gd"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/viewport_width=320
