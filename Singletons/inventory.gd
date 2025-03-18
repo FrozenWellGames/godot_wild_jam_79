@@ -3,8 +3,10 @@ extends Node
 
 var inventory = []
 
+@onready var inventory_slot_scene = preload("res://Game/Inventory/inventory_slot.tscn")
+
 func _ready() -> void:
-	inventory.resize(10)
+	inventory.resize(12)
 
 func add_item(item) -> bool:
 	for i in range(inventory.size()):

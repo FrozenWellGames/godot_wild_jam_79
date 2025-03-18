@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjke1"]
 size = Vector2(13, 11)
 
-[node name="InventoryItem" type="Node2D" groups=["items"]]
+[node name="InventoryItem" type="Node2D"]
 script = ExtResource("1_oovlj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,7 +1,6 @@
 extends Area2D
 
-
-var health:int
+var health: int
 
 
 func _ready() -> void:

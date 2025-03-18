@@ -2,15 +2,15 @@
 extends Node2D
 
 @export_subgroup("Settings")
-@export  var item_type:String = ""
+@export var item_type: String = ""
 @export var item_name: String = ""
-@export  var item_texture: Texture
+@export var item_texture: Texture
 @export var item_effect: String = ""
 var scene_path: String = "res://Game/MiningScene/InventoryItem/inventory_item.tscn"
 
 @onready var icon_sprite = $Sprite2D
 
-var player_is_overlapping:bool = false
+var player_is_overlapping: bool = false
 
 
 func _ready() -> void:
@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 		
 func pick_up_item() -> void:
 	var item = {
-		"quantity":1,
+		"quantity": 1,
 		"type": item_type,
 		"name": item_name,
 		"texture": item_texture,

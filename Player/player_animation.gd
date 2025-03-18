@@ -2,6 +2,7 @@ extends AnimationPlayer
 
 enum states {PLATFORM, LADDER, MINING}
 
+
 func player_animations(IsOnFloor: bool, state, velocity: Vector2, sprite: Sprite2D) -> void:
 	if state == states.PLATFORM:
 		if IsOnFloor:

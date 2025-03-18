@@ -19,8 +19,16 @@ scale = Vector2(15.96, 1.00364)
 position = Vector2(216, 172)
 
 [node name="InventoryItem" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(121, 174)
-item_type = "Ingredient"
-item_name = "Stone"
+position = Vector2(138, 174)
+item_name = "Rock"
 item_texture = ExtResource("5_a0e3j")
-item_effect = "nothing"
+
+[node name="InventoryItem2" parent="." instance=ExtResource("4_rrkci")]
+position = Vector2(185, 173)
+item_name = "Rock"
+item_texture = ExtResource("5_a0e3j")
+
+[node name="InventoryItem3" parent="." instance=ExtResource("4_rrkci")]
+position = Vector2(279, 174)
+item_name = "Rock"
+item_texture = ExtResource("5_a0e3j")

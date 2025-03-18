@@ -20,6 +20,7 @@ config/icon="uid://c8vlbcq01l5l7"
 SignalManager="*res://Singletons/signal_manager.gd"
 GameManager="*res://Singletons/game_manager.gd"
 Inventory="*res://Singletons/inventory.gd"
+GameUi="*res://Singletons/game_ui.tscn"
 
 [debug]
 

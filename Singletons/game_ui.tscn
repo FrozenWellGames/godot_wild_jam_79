@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmqk6bnn8qc7g"]
+
+[ext_resource type="Script" uid="uid://6ryid3uipbop" path="res://Singletons/game_ui.gd" id="1_qufki"]
+[ext_resource type="PackedScene" uid="uid://cckmkwtl5kglv" path="res://Game/Inventory/inventory_ui.tscn" id="2_rig7c"]
+
+[node name="GameUI" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_qufki")
+
+[node name="InventoryUI" parent="." instance=ExtResource("2_rig7c")]
+visible = false

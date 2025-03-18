@@ -40,7 +40,7 @@ func get_input_platform() -> void:
 	if Input.is_action_pressed("action") and is_on_floor() or state == states.MINING:
 		state = states.MINING
 		velocity.x = 0
-	else:# state != states.MINING:
+	else: # state != states.MINING:
 		#left right movement
 		velocity.x = Input.get_axis("move_left", "move_right") * run_speed
 		#jump
@@ -57,8 +57,6 @@ func get_input_platform() -> void:
 			is_ovelapping_ladder = true
 		
 	
-
-
 func get_input_ladder() -> void:
 	velocity = Vector2.ZERO
 	#left right movement
