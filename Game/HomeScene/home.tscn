@@ -9,26 +9,26 @@
 [node name="Home" type="Node2D"]
 
 [node name="MineEntrance" parent="." instance=ExtResource("3_sobo7")]
-position = Vector2(64, 175)
+position = Vector2(163, 344)
 
 [node name="Solid" parent="." instance=ExtResource("1_etedl")]
-position = Vector2(6.97374e-06, 175)
-scale = Vector2(15.96, 1.00364)
+position = Vector2(1, 345)
+scale = Vector2(32, 4.178)
 
 [node name="Player" parent="." instance=ExtResource("2_sobo7")]
-position = Vector2(216, 172)
+position = Vector2(443, 334)
 
 [node name="InventoryItem" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(138, 174)
+position = Vector2(258, 338)
 item_name = "Rock"
 item_texture = ExtResource("5_a0e3j")
 
 [node name="InventoryItem2" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(185, 173)
+position = Vector2(356, 336)
 item_name = "Rock"
 item_texture = ExtResource("5_a0e3j")
 
 [node name="InventoryItem3" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(279, 174)
+position = Vector2(569, 340)
 item_name = "Rock"
 item_texture = ExtResource("5_a0e3j")

@@ -6,6 +6,7 @@ size = Vector2(100, 10)
 [node name="OneWay" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(50, 5)
+position = Vector2(100, 10)
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_oshxh")
 one_way_collision = true

@@ -12,23 +12,23 @@
 script = ExtResource("1_cq2c5")
 
 [node name="Solid" parent="." instance=ExtResource("2_cstt1")]
-position = Vector2(13, 173)
-scale = Vector2(14.92, 1)
+position = Vector2(0, 350)
+scale = Vector2(32, 2.145)
 
 [node name="Ladder" parent="." instance=ExtResource("4_px0q7")]
-position = Vector2(182, 113)
+position = Vector2(279, 230)
 scale = Vector2(1, 4)
 
 [node name="OneWay" parent="." instance=ExtResource("5_urjtt")]
-position = Vector2(162, 113)
-scale = Vector2(0.408203, 0.519995)
+position = Vector2(239, 230)
+scale = Vector2(0.408203, 0.547678)
 
 [node name="LadderTop" parent="." instance=ExtResource("6_ubwdu")]
-position = Vector2(182, 110)
-scale = Vector2(0.244445, 0.28577)
+position = Vector2(279, 224)
+scale = Vector2(0.252756, 0.29911)
 
 [node name="Mineable" parent="." instance=ExtResource("7_ubwdu")]
-position = Vector2(264, 173)
+position = Vector2(411, 341)
 
 [node name="Player" parent="." instance=ExtResource("3_5apsa")]
-position = Vector2(136, 173)
+position = Vector2(175, 341)

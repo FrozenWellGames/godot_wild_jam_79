@@ -5,10 +5,10 @@
 [ext_resource type="Script" uid="uid://fsqt45lxs3r8" path="res://Player/player_animation.gd" id="3_btcbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8h54"]
-size = Vector2(12, 20)
+size = Vector2(22, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
-size = Vector2(9, 6)
+size = Vector2(15, 19)
 
 [sub_resource type="Animation" id="Animation_btcbx"]
 length = 0.001
@@ -198,17 +198,17 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
-size = Vector2(7, 10.5)
+size = Vector2(11.8859, 17.7324)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_l8h54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
+position = Vector2(-1, -18)
 shape = SubResource("RectangleShape2D_l8h54")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
+position = Vector2(0, -32)
 texture = ExtResource("2_4ntmi")
 hframes = 10
 vframes = 6
@@ -217,7 +217,7 @@ vframes = 6
 position = Vector2(0, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/WeaponHitbox"]
-position = Vector2(20.5, -5)
+position = Vector2(37, 3.5)
 shape = SubResource("RectangleShape2D_btcbx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -230,7 +230,7 @@ script = ExtResource("3_btcbx")
 scale = Vector2(1.0096, 1.01509)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDetector"]
-position = Vector2(0, -5.25)
+position = Vector2(-1.98098, -8.86621)
 shape = SubResource("RectangleShape2D_4ntmi")
 
 [connection signal="area_entered" from="AreaDetector" to="." method="_on_area_detector_area_entered"]

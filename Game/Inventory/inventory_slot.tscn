@@ -6,40 +6,40 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a623x"]
 
 [node name="InventorySlot" type="Control"]
-custom_minimum_size = Vector2(40, 40)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
 offset_top = 10.0
-offset_right = -270.0
-offset_bottom = -130.0
+offset_right = -550.0
+offset_bottom = -270.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_amtx1")
 
 [node name="OuterRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 80.0
+offset_bottom = 80.0
 color = Color(0.83, 0.697615, 0.1079, 1)
 
-[node name="InnerRect" type="ColorRect" parent="."]
+[node name="InnerRect" type="ColorRect" parent="OuterRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -18.0
-offset_top = -18.0
-offset_right = 18.0
-offset_bottom = 18.0
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="QuantityLabel" type="Label" parent="InnerRect"]
+[node name="QuantityLabel" type="Label" parent="OuterRect/InnerRect"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
@@ -47,11 +47,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "1"
 
-[node name="ItemIcon" type="Sprite2D" parent="InnerRect"]
-position = Vector2(20, 20)
+[node name="ItemIcon" type="Sprite2D" parent="OuterRect/InnerRect"]
+position = Vector2(40, 40)
 texture = ExtResource("2_a623x")
 
-[node name="ItemButton" type="Button" parent="."]
+[node name="ItemButton" type="Button" parent="OuterRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,28 +60,42 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a623x")
 
-[node name="UsagePanel" type="ColorRect" parent="."]
+[node name="UsagePanel" type="ColorRect" parent="OuterRect"]
 visible = false
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_top = -20.0
-offset_right = 48.0
-offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
 color = Color(0.831373, 0.698039, 0.109804, 1)
 
-[node name="UseButton" type="Button" parent="UsagePanel"]
-layout_mode = 0
-offset_right = 23.0
-offset_bottom = 20.0
+[node name="UseButton" type="Button" parent="OuterRect/UsagePanel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_right = 30.0
+grow_vertical = 0
 theme_override_font_sizes/font_size = 8
 text = "Use"
 
-[node name="DropButton" type="Button" parent="UsagePanel"]
-layout_mode = 0
-offset_left = 23.0
-offset_right = 52.0
-offset_bottom = 20.0
+[node name="DropButton" type="Button" parent="OuterRect/UsagePanel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -20.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_font_sizes/font_size = 8
 text = "Drop
 "
 
-[connection signal="pressed" from="ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="OuterRect/ItemButton" to="." method="_on_item_button_pressed"]

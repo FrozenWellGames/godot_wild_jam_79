@@ -1,8 +1,8 @@
 extends Control
 
-@onready var icon = $InnerRect/ItemIcon
-@onready var quantity_label = $InnerRect/QuantityLabel
-@onready var usage_panel = $UsagePanel
+@onready var icon = $OuterRect/InnerRect/ItemIcon
+@onready var quantity_label = $OuterRect/InnerRect/QuantityLabel
+@onready var usage_panel = $OuterRect/UsagePanel
 
 var item = null
 
