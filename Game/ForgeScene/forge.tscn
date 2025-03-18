@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5qsradd3civr"]
+
+[ext_resource type="Script" uid="uid://cksadpk8gugg5" path="res://Game/ForgeScene/forge.gd" id="1_i4uh4"]
+[ext_resource type="PackedScene" uid="uid://vibtxikddh72" path="res://Game/MiningScene/LevelStructure/solid.tscn" id="2_da30v"]
+[ext_resource type="PackedScene" uid="uid://cbyc7negjiqed" path="res://Player/player.tscn" id="3_d8i3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8i3m"]
+size = Vector2(65, 88)
+
+[node name="Forge" type="Node2D"]
+script = ExtResource("1_i4uh4")
+
+[node name="Solid" parent="." instance=ExtResource("2_da30v")]
+position = Vector2(1, 345)
+scale = Vector2(32, 4.178)
+
+[node name="Player" parent="." instance=ExtResource("3_d8i3m")]
+position = Vector2(319, 333)
+
+[node name="Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(218, 301)
+shape = SubResource("RectangleShape2D_d8i3m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Door"]
+position = Vector2(218, 301)
+shape = SubResource("RectangleShape2D_d8i3m")
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
+[connection signal="body_exited" from="Door" to="." method="_on_door_body_exited"]

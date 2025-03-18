@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7y5f5km53xco"]
+
+[ext_resource type="Script" uid="uid://cjgs55lsrawl6" path="res://Game/HomeScene/Forge/forge_exterior.gd" id="1_3eskl"]
+[ext_resource type="Texture2D" uid="uid://cyk56rg5mqn1p" path="res://Game/HomeScene/Forge/forge_exterior.png" id="1_qje2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eskl"]
+size = Vector2(46, 64)
+
+[node name="ForgeExterior" type="Node2D"]
+script = ExtResource("1_3eskl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(56, -48)
+texture = ExtResource("1_qje2b")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(55, 26)
+shape = SubResource("RectangleShape2D_3eskl")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

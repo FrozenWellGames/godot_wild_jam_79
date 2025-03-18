@@ -1,34 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://dor380hd3sm5f"]
+[gd_scene load_steps=5 format=3 uid="uid://dor380hd3sm5f"]
 
 [ext_resource type="PackedScene" uid="uid://vibtxikddh72" path="res://Game/MiningScene/LevelStructure/solid.tscn" id="1_etedl"]
 [ext_resource type="PackedScene" uid="uid://cbyc7negjiqed" path="res://Player/player.tscn" id="2_sobo7"]
 [ext_resource type="PackedScene" uid="uid://brchx6ivwiru4" path="res://Game/HomeScene/MineEntrance/mine_entrance.tscn" id="3_sobo7"]
-[ext_resource type="PackedScene" uid="uid://dkllacsyjfh2b" path="res://Game/MiningScene/InventoryItem/inventory_item.tscn" id="4_rrkci"]
-[ext_resource type="Texture2D" uid="uid://b3yyl6yfh4ybv" path="res://Game/MiningScene/Mineable/Assets/collectable_rock.png" id="5_a0e3j"]
+[ext_resource type="PackedScene" uid="uid://c7y5f5km53xco" path="res://Game/HomeScene/Forge/forge_exterior.tscn" id="6_mo1yc"]
 
 [node name="Home" type="Node2D"]
 
 [node name="MineEntrance" parent="." instance=ExtResource("3_sobo7")]
 position = Vector2(163, 344)
 
+[node name="ForgeExterior" parent="." instance=ExtResource("6_mo1yc")]
+position = Vector2(423, 296)
+
 [node name="Solid" parent="." instance=ExtResource("1_etedl")]
 position = Vector2(1, 345)
 scale = Vector2(32, 4.178)
 
 [node name="Player" parent="." instance=ExtResource("2_sobo7")]
-position = Vector2(443, 334)
-
-[node name="InventoryItem" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(258, 338)
-item_name = "Rock"
-item_texture = ExtResource("5_a0e3j")
-
-[node name="InventoryItem2" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(356, 336)
-item_name = "Rock"
-item_texture = ExtResource("5_a0e3j")
-
-[node name="InventoryItem3" parent="." instance=ExtResource("4_rrkci")]
-position = Vector2(569, 340)
-item_name = "Rock"
-item_texture = ExtResource("5_a0e3j")
+position = Vector2(290, 341)

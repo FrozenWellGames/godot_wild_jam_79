@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyeqoy6p7lq4e"]
+[gd_scene load_steps=10 format=3 uid="uid://cyeqoy6p7lq4e"]
 
 [ext_resource type="Script" uid="uid://c562cibry7flx" path="res://Game/MiningScene/mining_scene.gd" id="1_cq2c5"]
 [ext_resource type="PackedScene" uid="uid://vibtxikddh72" path="res://Game/MiningScene/LevelStructure/solid.tscn" id="2_cstt1"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://762ghrducao" path="res://Game/MiningScene/LevelStructure/one_way.tscn" id="5_urjtt"]
 [ext_resource type="PackedScene" uid="uid://c7arlsh6ls67h" path="res://Game/MiningScene/Ladder/ladder_top.tscn" id="6_ubwdu"]
 [ext_resource type="PackedScene" uid="uid://dw5ak8pmvg2uf" path="res://Game/MiningScene/Mineable/mineable.tscn" id="7_ubwdu"]
+[ext_resource type="PackedScene" uid="uid://dkllacsyjfh2b" path="res://Game/MiningScene/InventoryItem/inventory_item.tscn" id="8_x135q"]
+[ext_resource type="Texture2D" uid="uid://b3yyl6yfh4ybv" path="res://Game/MiningScene/Mineable/Assets/collectable_rock.png" id="9_oavha"]
 
 [node name="MiningScene" type="Node2D"]
 script = ExtResource("1_cq2c5")
@@ -28,7 +30,37 @@ position = Vector2(279, 224)
 scale = Vector2(0.252756, 0.29911)
 
 [node name="Mineable" parent="." instance=ExtResource("7_ubwdu")]
-position = Vector2(411, 341)
+position = Vector2(474, 341)
 
 [node name="Player" parent="." instance=ExtResource("3_5apsa")]
 position = Vector2(175, 341)
+
+[node name="InventoryItem" parent="." instance=ExtResource("8_x135q")]
+position = Vector2(35, 343)
+item_name = "Rock"
+item_texture = ExtResource("9_oavha")
+
+[node name="InventoryItem2" parent="." instance=ExtResource("8_x135q")]
+position = Vector2(133, 341)
+item_name = "Rock"
+item_texture = ExtResource("9_oavha")
+
+[node name="InventoryItem3" parent="." instance=ExtResource("8_x135q")]
+position = Vector2(346, 345)
+item_name = "Rock"
+item_texture = ExtResource("9_oavha")
+
+[node name="InventoryItem4" parent="." instance=ExtResource("8_x135q")]
+position = Vector2(35, 343)
+item_name = "Rock"
+item_texture = ExtResource("9_oavha")
+
+[node name="InventoryItem5" parent="." instance=ExtResource("8_x135q")]
+position = Vector2(133, 341)
+item_name = "Rock"
+item_texture = ExtResource("9_oavha")
+
+[node name="InventoryItem6" parent="." instance=ExtResource("8_x135q")]
+position = Vector2(346, 345)
+item_name = "Rock"
+item_texture = ExtResource("9_oavha")

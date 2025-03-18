@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-var run_speed: int = 70
-var climb_speed: int = 40
-var jump_speed: int = -150
-var gravity: int = 800
+var run_speed: int = 140
+var climb_speed: int = 80
+var jump_speed: int = -250
+var gravity: int = 1000
 var is_ovelapping_ladder: bool = false
 var is_ovelapping_ladder_top: bool = false
 enum states {PLATFORM, LADDER, MINING}
